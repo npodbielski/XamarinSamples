@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:stylesInheritance="clr-namespace:StylesInheritance;assembly=StylesInheritance"
+             x:Class="StylesInheritance.App">
+  <Application.Resources>
+    <ResourceDictionary>
+      <Style TargetType="Label">
+        <Setter Property="FontSize" Value="45" />
+      </Style>
+    </ResourceDictionary>
+  </Application.Resources>
+  <Application.MainPage>
+    <ContentPage>
+      <Grid>
+        <Grid.Resources>
+          <ResourceDictionary>
+            <Style TargetType="Label" BasedOn="{stylesInheritance:StaticResourceExt {x:Type Label}}">
+              <Setter Property="BackgroundColor" Value="Red"></Setter>
+            </Style>
+          </ResourceDictionary>
+        </Grid.Resources>
+        <Label Text="Label Text" />
+      </Grid>
+    </ContentPage>
+  </Application.MainPage>
+</Application>

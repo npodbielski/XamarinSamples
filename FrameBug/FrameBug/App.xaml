@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrameBug.App">
+  <Application.MainPage>
+    <ContentPage>
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"></RowDefinition>
+          <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackLayout Padding="10">
+          <Frame VerticalOptions="Center" OutlineColor="White" 
+                 BackgroundColor="{Binding LineColor}">
+            <Label Text="Label" FontSize="60" />
+          </Frame>
+        </StackLayout>
+        <Button Text="Change color" Grid.Row="1" Command="{Binding ChangeColor}"></Button>
+      </Grid>
+    </ContentPage>
+  </Application.MainPage>
+</Application>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:styles="clr-namespace:Styles;assembly=Styles"
+             x:Class="Styles.App">
+  <Application.Resources>
+    <ResourceDictionary>
+      <Style TargetType="Frame" x:Key="Style">
+        <Setter Property="Padding" Value="0" />
+      </Style>
+    </ResourceDictionary>
+  </Application.Resources>
+  <Application.MainPage>
+    <ContentPage>
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+          <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <Frame VerticalOptions="Center"
+               Grid.Row="0"
+               Padding="0">
+          <Label Text="100 height" FontSize="60" />
+        </Frame>
+        <Frame VerticalOptions="Center" Style="{StaticResource Style}"
+               Grid.Row="1"
+               Padding="0">
+          <Label Text="100 height" FontSize="60" />
+        </Frame>
+        <Frame VerticalOptions="Center" Style="{StaticResource Style}"
+               Grid.Row="2">
+          <Label Text="100 height" FontSize="60" />
+        </Frame>
+        <styles:FrameExt VerticalOptions="Center" Style="{StaticResource Style}"
+               Grid.Row="3">
+          <Label Text="100 height" FontSize="60" />
+        </styles:FrameExt>
+      </Grid>
+    </ContentPage>
+  </Application.MainPage>
+</Application>

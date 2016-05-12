@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:masterDetail="clr-namespace:MasterDetail;assembly=MasterDetail"
+                  x:Class="MasterDetail.MasterPage"
+                  WidthRequest="50">
+  <MasterDetailPage.Master>
+    <ContentPage Title="Test" WidthRequest="50" BackgroundColor="Blue">
+      <StackLayout WidthRequest="50">
+        <Button Text="Detail1" Clicked="Button1_OnClicked" />
+        <Button Text="Detail2" Clicked="Button2_OnClicked" />
+        <Button Text="Detail3" Clicked="Button3_OnClicked" />
+        <Button Text="Detail4" Clicked="Button4_OnClicked" />
+      </StackLayout>
+    </ContentPage>
+  </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+    <NavigationPage>
+      <x:Arguments>
+        <masterDetail:Detail1 />
+      </x:Arguments>
+    </NavigationPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>

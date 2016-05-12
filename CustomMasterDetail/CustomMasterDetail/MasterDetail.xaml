@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CustomMasterDetail.MasterDetail">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackLayout Grid.Column="0">
+            <Button Text="Detail1" Command="{Binding ToDetail1}" />
+            <Button Text="Detail2" Command="{Binding ToDetail2}" />
+            <Button Text="Detail3" Command="{Binding ToDetail3}" />
+        </StackLayout>
+        <ContentView Grid.Column="1" x:Name="DetailContainer" />
+    </Grid>
+</ContentPage>
