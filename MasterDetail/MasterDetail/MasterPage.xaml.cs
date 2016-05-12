@@ -51,10 +51,10 @@ namespace MasterDetail
             ChangeDetail(new Detail3());
         }
 
-private void Button4_OnClicked(object sender, EventArgs e)
-{
-    App.Current.MainPage = new Detail4();
-}
+        private void Button4_OnClicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new Detail4();
+        }
 
         private void ChangeDetail(Page page)
         {
