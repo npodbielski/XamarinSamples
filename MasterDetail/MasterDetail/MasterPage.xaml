@@ -3,6 +3,7 @@
                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                   xmlns:masterDetail="clr-namespace:MasterDetail;assembly=MasterDetail"
                   x:Class="MasterDetail.MasterPage"
+                  MasterBehavior=""
                   WidthRequest="50">
   <MasterDetailPage.Master>
     <ContentPage Title="Test" WidthRequest="50" BackgroundColor="Blue">
