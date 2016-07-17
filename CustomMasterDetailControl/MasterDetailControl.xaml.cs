@@ -17,8 +17,15 @@ namespace CustomMasterDetailControl
             propertyChanged: (bindable, value, newValue) =>
             {
                 var masterPage = (MasterDetailControl)bindable;
-                masterPage.DetailContainer.Content = newValue != null ?
-                    ((ContentPage)newValue).Content : null;
+                View content;
+                var contentPage = (ContentPage)newValue;
+                if (contentPage != null)
+                {
+                    content = contentPage.Content;
+                    content.BindingContext = contentPage.BindingContext;
+                }
+                else content = null;
+                masterPage.DetailContainer.Content = content;
                 masterPage.OnPropertyChanged("SideContentVisible");
             });
 
