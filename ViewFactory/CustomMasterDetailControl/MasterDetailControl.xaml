@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CustomMasterDetailControl.MasterDetailControl"
+             x:Name="Parent">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <StackLayout Grid.Column="0" x:Name="SideContentContainer"
+                 WidthRequest="250"
+                 IsVisible="{Binding SideContentVisible, Source={x:Reference Name=Parent}}" />
+    <ContentView Grid.Column="1" x:Name="DetailContainer" />
+  </Grid>
+</ContentPage>

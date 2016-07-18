@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<masterDetail:MasterDetailControl 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:masterDetail="clr-namespace:CustomMasterDetailControl;assembly=CustomMasterDetailControl"
+    x:Class="ViewFactorySample.MasterDetail">
+    <masterDetail:MasterDetailControl.SideContent>
+        <StackLayout>
+            <Button Text="To detail page" Command="{Binding ToDetail}" />
+            <Button Text="To ordinary page" Command="{Binding ToOrdiStepnaryPage}" />
+            <Button Text="To external page" Command="{Binding ToExternalPage}" />
+            <Button Text="To overriden page" Command="{Binding ToOverridenPage}" />
+            <Button Text="To custom connection page" Command="{Binding ToCustomConnection}" />
+            <Button Text="To wizard" Command="{Binding ToWizard}" />
+        </StackLayout>
+    </masterDetail:MasterDetailControl.SideContent>
+</masterDetail:MasterDetailControl>
