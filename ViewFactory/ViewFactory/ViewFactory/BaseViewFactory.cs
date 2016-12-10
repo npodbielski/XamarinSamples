@@ -8,7 +8,7 @@ using ViewFactory.Extensions;
 
 namespace ViewFactory.ViewFactory
 {
-    public abstract class BaseViewFactory
+    public abstract class BaseViewFactory : IViewFactory
     {
         public static Dictionary<Type, ViewData> Views = new Dictionary<Type, ViewData>();
 

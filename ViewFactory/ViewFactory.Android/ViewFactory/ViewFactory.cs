@@ -9,7 +9,7 @@ namespace ViewFactory.ViewFactory
         protected override Assembly[] GetViewAssemblies()
         {
             return AppDomain.CurrentDomain.GetAssemblies()
-                .Where(a=>a.CustomAttributes.Any(ca=>ca.AttributeType==typeof(ViewAssemblyAttribute))).ToArray();
+                .Where(a => a.CustomAttributes.Any(ca => ca.AttributeType == typeof(ViewAssemblyAttribute))).ToArray();
         }
 
         protected override ConstructorInfo GetDefaultConstructor(Type page)

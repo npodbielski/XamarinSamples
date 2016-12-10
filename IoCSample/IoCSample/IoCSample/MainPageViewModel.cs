@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using CustomMasterDetailControl;
 
 namespace IoCSample
 {
-    public class MainPageViewModel
+    public class MainPageViewModel : BaseViewModel
     {
         public MainPageViewModel()
         {

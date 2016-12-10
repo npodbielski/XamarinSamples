@@ -109,9 +109,17 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\CustomMasterDetailControl\CustomMasterDetailControl.csproj">
-      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
+    <ProjectReference Include="..\..\..\ViewFactory\CustomMasterDetailControl\CustomMasterDetailControl.csproj">
+      <Project>{DECC51C6-6182-481E-AFCA-544ED833B5BE}</Project>
       <Name>CustomMasterDetailControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ViewFactory\ViewFactory.Android\ViewFactory.Android.csproj">
+      <Project>{141dc1d7-2eb8-42fb-b9d7-79b60f657acf}</Project>
+      <Name>ViewFactory.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ViewFactory\ViewFactory\ViewFactory.csproj">
+      <Project>{13116ea1-5daf-48df-a10a-d22142ad069b}</Project>
+      <Name>ViewFactory</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="..\IoCSample\IoCSample.projitems" Label="Shared" Condition="Exists('..\IoCSample\IoCSample.projitems')" />

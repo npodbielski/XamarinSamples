@@ -1,26 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
+﻿using System.Reflection;
 using TinyIoC;
+using ViewFactory.ViewFactory;
 
 namespace IoCSample
 {
     public partial class App
     {
-        public static TinyIoCContainer IoC = new TinyIoCContainer();
-        public App ()
+        public App (IViewFactory factory)
         {
-            IoC.AutoRegister();
-            InitializeComponent ();
-            //IoC.Register<MainPage>();
-            //IoC.Register<MainPageViewModel>();
-            MainPage = IoC.Resolve<MainPage>();
-            //AppDomain
-            MainPage.BindingContext = IoC.Resolve<MainPageViewModel>();
+            factory.Init(Assembly.GetExecutingAssembly());
+            InitializeComponent();
+            var uiPage = factory.CreateView<MainPageViewModel>();
+            MainPage = uiPage;
+        }
+
+        public void RegisterServices(TinyIoCContainer container)
+        {
+            
         }
     }
 }

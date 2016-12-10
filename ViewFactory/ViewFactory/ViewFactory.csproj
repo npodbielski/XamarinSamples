@@ -38,6 +38,7 @@
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewAssemblyAttribute.cs" />
+    <Compile Include="ViewFactory\IViewFactory.cs" />
     <Compile Include="ViewFactory\ViewData.cs" />
     <Compile Include="ViewFactory\BaseViewFactory.cs" />
     <Compile Include="ViewFactory\ViewInfoAttribute.cs" />
