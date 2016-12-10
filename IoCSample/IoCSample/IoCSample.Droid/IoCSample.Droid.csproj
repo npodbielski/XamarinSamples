@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4030E69B-8045-4474-9D51-4F112E660458}</ProjectGuid>
+    <ProjectGuid>{63F3AD35-00E9-4579-B61E-2E17FD4EDC8F}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ViewFactorySample</RootNamespace>
-    <AssemblyName>ViewFactorySample.Droid</AssemblyName>
+    <RootNamespace>IoCSample.Droid</RootNamespace>
+    <AssemblyName>IoCSample.Droid</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
@@ -23,8 +23,7 @@
     <MandroidI18n />
     <JavaMaximumHeapSize />
     <JavaOptions />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>2ad0949a</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -102,8 +101,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Resources\AboutResources.txt" />
-    <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\Icon.png" />
@@ -112,29 +109,17 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ExternalAssembly\ExternalAssembly.csproj">
-      <Project>{e4b2290b-00b7-4dba-bbb5-e2fcad69129c}</Project>
-      <Name>ExternalAssembly</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ViewFactory.Android\ViewFactory.Android.csproj">
-      <Project>{141dc1d7-2eb8-42fb-b9d7-79b60f657acf}</Project>
-      <Name>ViewFactory.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CustomMasterDetailControl\CustomMasterDetailControl.csproj">
-      <Project>{decc51c6-6182-481e-afca-544ed833b5be}</Project>
+    <ProjectReference Include="..\..\..\CustomMasterDetailControl\CustomMasterDetailControl.csproj">
+      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
       <Name>CustomMasterDetailControl</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ViewFactory\ViewFactory.csproj">
-      <Project>{13116ea1-5daf-48df-a10a-d22142ad069b}</Project>
-      <Name>ViewFactory</Name>
-    </ProjectReference>
   </ItemGroup>
-  <Import Project="..\ViewFactorySample\ViewFactorySample.projitems" Label="Shared" Condition="Exists('..\ViewFactorySample\ViewFactorySample.projitems')" />
+  <Import Project="..\IoCSample\IoCSample.projitems" Label="Shared" Condition="Exists('..\IoCSample\IoCSample.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
   </Target>
