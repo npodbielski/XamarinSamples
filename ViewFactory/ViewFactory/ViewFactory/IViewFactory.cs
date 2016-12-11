@@ -1,6 +1,7 @@
-﻿using System;
+﻿using CustomMasterDetailControl;
+using System;
 using System.Reflection;
-using CustomMasterDetailControl;
+using Xamarin.Forms;
 
 namespace ViewFactory.ViewFactory
 {
@@ -15,6 +16,11 @@ namespace ViewFactory.ViewFactory
             where TView : UIPage;
 
         UIPage CreateView(Type viewModelType);
+
+        UIPage CreateView<TViewModel>(TViewModel viewModel);
+
         void Init(Assembly appAssembly);
+        bool IsDetailView(Type page);
+        bool IsDetailView<TViewModel>() where TViewModel : BaseViewModel;
     }
 }

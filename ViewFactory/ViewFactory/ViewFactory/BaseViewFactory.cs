@@ -5,6 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using ViewFactory.Extensions;
+using Xamarin.Forms;
 
 namespace ViewFactory.ViewFactory
 {
@@ -18,6 +19,16 @@ namespace ViewFactory.ViewFactory
         public UIPage CreateView<TViewModel>() where TViewModel : BaseViewModel
         {
             return CreateView(typeof(TViewModel));
+        }
+
+        public bool IsDetailView(Type viewModelType)
+        {
+            return Views[viewModelType].IsDetail;
+        }
+
+        public bool IsDetailView<TViewModel>() where TViewModel : BaseViewModel
+        {
+            return IsDetailView(typeof(TViewModel));
         }
 
         public UIPage CreateView<TViewModel, TView>() where TViewModel : BaseViewModel
@@ -40,6 +51,17 @@ namespace ViewFactory.ViewFactory
                 _unconnectedViews[type] = GetViewCreator(type);
             }
             return CreateView(viewModel, _unconnectedViews[type]);
+        }
+
+        public UIPage CreateView<TViewModel>(TViewModel viewModel)
+        {
+            var viewModelType = viewModel.GetType();
+            if (Views.ContainsKey(viewModelType))
+            {
+                var viewData = Views[viewModelType];
+                return CreateView(viewModel, viewData.Creator);
+            }
+            return null;
         }
 
         public UIPage CreateView(Type viewModelType)
