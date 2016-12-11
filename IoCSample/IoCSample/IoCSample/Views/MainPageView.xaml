@@ -2,7 +2,7 @@
 <customMasterDetailControl:UIPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:customMasterDetailControl="clr-namespace:CustomMasterDetailControl;assembly=CustomMasterDetailControl"
-             x:Class="IoCSample.MainPageView">
+             x:Class="IoCSample.Views.MainPageView">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>

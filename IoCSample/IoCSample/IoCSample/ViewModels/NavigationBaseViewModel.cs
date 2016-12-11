@@ -1,7 +1,7 @@
 ﻿using System;
 using CustomMasterDetailControl;
 
-namespace IoCSample
+namespace IoCSample.ViewModels
 {
     public class NavigationBaseViewModel : BaseViewModel
     {

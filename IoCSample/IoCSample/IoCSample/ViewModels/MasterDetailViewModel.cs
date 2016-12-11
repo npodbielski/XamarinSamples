@@ -1,19 +1,17 @@
 ﻿using CustomMasterDetailControl;
 using System.Windows.Input;
-using ViewFactory.ViewFactory;
 using ViewFactorySample.ViewModels;
 using Xamarin.Forms;
 
-namespace ViewFactorySample
+namespace IoCSample.ViewModels
 {
     public class MasterDetailViewModel : MasterDetailControlViewModel
     {
-        private readonly IViewFactory _viewFactory;
         private ICommand _toDetai;
 
-        public MasterDetailViewModel(IViewFactory viewFactory)
+        public MasterDetailViewModel()
         {
-            _viewFactory = viewFactory;
+            
         }
         
         public ICommand ToDetail
@@ -23,7 +21,7 @@ namespace ViewFactorySample
         
         private void OnToDetail()
         {
-            Detail = _viewFactory.CreateView<DetailViewModel>();
+            NavigationHelper.NavigateTo<DetailViewModel>();
         }
     }
 }

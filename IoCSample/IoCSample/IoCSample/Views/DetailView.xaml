@@ -2,6 +2,6 @@
 <customMasterDetailControl:DetailPage xmlns="http://xamarin.com/schemas/2014/forms"
                                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                                   xmlns:customMasterDetailControl="clr-namespace:CustomMasterDetailControl;assembly=CustomMasterDetailControl"
-                                  x:Class="ViewFactorySample.DetailView">
+                                  x:Class="IoCSample.Views.DetailView">
     <Label Text="Detail" VerticalOptions="Center" HorizontalOptions="Center" />
 </customMasterDetailControl:DetailPage>

@@ -13,48 +13,44 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)DetailView.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)NavigationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TinyIoC.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DetailViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MasterDetailViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\NavigationBaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DetailView.xaml.cs">
       <DependentUpon>DetailView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)DetailViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MainPageView.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MainPageView.xaml.cs">
+      <SubType>Code</SubType>
       <DependentUpon>MainPageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MasterDetailView.xaml.cs">
+      <DependentUpon>MasterDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\PageView.xaml.cs">
       <SubType>Code</SubType>
+      <DependentUpon>PageView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)MainPageViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MasterDetail.xaml.cs">
-      <DependentUpon>MasterDetail.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)MasterDetailViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)NavigationBaseViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)NavigationHelper.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Page.xaml.cs">
-      <DependentUpon>Page.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)PageViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)TinyIoC.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DetailView.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DetailView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MasterDetail.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPageView.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MainPageView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Page.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MasterDetailView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\PageView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

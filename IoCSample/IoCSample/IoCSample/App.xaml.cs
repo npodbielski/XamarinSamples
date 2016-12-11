@@ -1,6 +1,10 @@
 ﻿using System.Reflection;
+using Android.Widget;
+using CustomMasterDetailControl;
+using IoCSample.ViewModels;
 using TinyIoC;
 using ViewFactory.ViewFactory;
+using ViewFactorySample;
 using Xamarin.Forms;
 
 namespace IoCSample
@@ -22,7 +26,7 @@ namespace IoCSample
 
         public void RegisterServices(TinyIoCContainer container)
         {
-
+            container.Register<INavigationService, NavigationService<MasterDetailViewModel>>();
         }
     }
 }

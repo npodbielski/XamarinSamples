@@ -1,4 +1,4 @@
-﻿namespace ViewFactorySample
+﻿namespace IoCSample.Views
 {
     public partial class DetailView
     {

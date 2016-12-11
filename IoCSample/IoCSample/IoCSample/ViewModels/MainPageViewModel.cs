@@ -1,7 +1,7 @@
 ﻿using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace IoCSample
+namespace IoCSample.ViewModels
 {
     public class MainPageViewModel : NavigationBaseViewModel
     {

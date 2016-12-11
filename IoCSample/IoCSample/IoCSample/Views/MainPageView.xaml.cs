@@ -1,4 +1,4 @@
-﻿namespace IoCSample
+﻿namespace IoCSample.Views
 {
 	public partial class MainPageView
 	{
