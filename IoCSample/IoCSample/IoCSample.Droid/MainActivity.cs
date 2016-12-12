@@ -1,10 +1,8 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Android.Widget;
 using TinyIoC;
 using ViewFactory.ViewFactory;
-using VFactory = ViewFactory.ViewFactory.ViewFactory;
 
 namespace IoCSample.Droid
 {
@@ -25,7 +23,7 @@ namespace IoCSample.Droid
 
         private void RegisterServices(TinyIoCContainer container)
         {
-            container.Register<IViewFactory, VFactory>();
+            container.Register<IViewFactory, IoCViewFactory>();
         }
     }
 }

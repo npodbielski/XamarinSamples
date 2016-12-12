@@ -3,6 +3,13 @@
                                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                                   xmlns:customMasterDetailControl="clr-namespace:CustomMasterDetailControl;assembly=CustomMasterDetailControl"
                                   x:Class="IoCSample.Views.DetailView">
-    <Label Text="Detail" VerticalOptions="Center" HorizontalOptions="Center"
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Text="Detail" VerticalOptions="Center" HorizontalOptions="Center"
            FontSize="40"/>
+        <Entry Grid.Row="1" FontSize="40" Text="{Binding Text}" />
+    </Grid>
 </customMasterDetailControl:DetailPage>

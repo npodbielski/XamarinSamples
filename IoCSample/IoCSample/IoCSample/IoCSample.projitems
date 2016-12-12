@@ -14,6 +14,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)NavigationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DataCacheService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IDataCacheService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Navigation\INavigationService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Navigation\NavigationService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TinyIoC.cs" />

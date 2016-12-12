@@ -8,6 +8,8 @@
         <StackLayout>
             <Button Text="To detail page"
                     FontSize="40" Command="{Binding ToDetail}" />
+            <Button Text="To detail 1 page"
+                    FontSize="40" Command="{Binding ToDetail1}" />
         </StackLayout>
     </masterDetail:MasterDetailControl.SideContent>
 </masterDetail:MasterDetailControl>

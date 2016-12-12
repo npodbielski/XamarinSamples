@@ -12,7 +12,7 @@ namespace ViewFactory.ViewFactory
     public abstract class BaseViewFactory : IViewFactory
     {
         public static Dictionary<Type, ViewData> Views = new Dictionary<Type, ViewData>();
-
+        
         private const string ViewModelPrefix = "Model";
         private readonly Dictionary<Type, Func<UIPage>> _unconnectedViews = new Dictionary<Type, Func<UIPage>>();
 
@@ -92,10 +92,16 @@ namespace ViewFactory.ViewFactory
 
         protected abstract Assembly[] GetViewAssemblies();
 
-        private static UIPage CreateView(Type viewModelType, Func<UIPage> creator)
+        private UIPage CreateView(Type viewModelType, Func<UIPage> creator)
+        {
+            var viewModel = CreateViewModelInstance(viewModelType);
+            return CreateView(viewModel, creator);
+        }
+
+        protected virtual object CreateViewModelInstance(Type viewModelType)
         {
             var viewModel = Activator.CreateInstance(viewModelType);
-            return CreateView(viewModel, creator);
+            return viewModel;
         }
 
         private static UIPage CreateView(object viewModel, Func<UIPage> creator)
