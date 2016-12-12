@@ -13,16 +13,15 @@ namespace IoCSample.ViewModels
         }
 
         public string MainText { get; set; }
-
+        
         public ICommand ToPage
         {
             get
             {
                 return _toPage ?? (_toPage = new Command(() =>
-                       {
-                           NavigationHelper.NavigateTo<PageViewModel>(
-                               vm => vm.SetLabelText("Value from MainPageViewModel"));
-                       }));
+                {
+                    NavigateTo<PageViewModel>(vm => vm.SetLabelText("Value from MainPageViewModel"));
+                }));
             }
         }
     }

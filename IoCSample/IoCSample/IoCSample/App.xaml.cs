@@ -1,6 +1,8 @@
 ﻿using System.Reflection;
 using Android.Widget;
 using CustomMasterDetailControl;
+using IoCSample.Services;
+using IoCSample.Services.Navigation;
 using IoCSample.ViewModels;
 using TinyIoC;
 using ViewFactory.ViewFactory;

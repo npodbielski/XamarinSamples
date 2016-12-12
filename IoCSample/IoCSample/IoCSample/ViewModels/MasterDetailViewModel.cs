@@ -8,11 +8,6 @@ namespace IoCSample.ViewModels
     public class MasterDetailViewModel : MasterDetailControlViewModel
     {
         private ICommand _toDetai;
-
-        public MasterDetailViewModel()
-        {
-            
-        }
         
         public ICommand ToDetail
         {
@@ -21,7 +16,7 @@ namespace IoCSample.ViewModels
         
         private void OnToDetail()
         {
-            NavigationHelper.NavigateTo<DetailViewModel>();
+            NavigationHelper.NavigateTo<Detail1ViewModel>();
         }
     }
 }

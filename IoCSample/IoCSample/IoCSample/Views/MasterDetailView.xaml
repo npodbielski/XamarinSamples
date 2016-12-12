@@ -6,7 +6,8 @@
     x:Class="IoCSample.Views.MasterDetailView">
     <masterDetail:MasterDetailControl.SideContent>
         <StackLayout>
-            <Button Text="To detail page" Command="{Binding ToDetail}" />
+            <Button Text="To detail page"
+                    FontSize="40" Command="{Binding ToDetail}" />
         </StackLayout>
     </masterDetail:MasterDetailControl.SideContent>
 </masterDetail:MasterDetailControl>
