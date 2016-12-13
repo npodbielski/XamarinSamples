@@ -28,7 +28,7 @@ namespace IoCSample.Services.Navigation
         {
             get
             {
-                var firstOrDefault = _navigation.NavigationStack.FirstOrDefault();
+                var firstOrDefault = _navigation.NavigationStack.LastOrDefault();
                 return firstOrDefault?.BindingContext as TMasterViewModel;
             }
         }
@@ -59,6 +59,7 @@ namespace IoCSample.Services.Navigation
                 {
                     masterPage = _viewFactory.CreateView<TMasterViewModel>();
                     masterViewModel = (TMasterViewModel)masterPage.BindingContext;
+                    masterViewModel.SetNavigation(_navigation);
                 }
                 masterViewModel.Detail = page;
                 if (MasterViewModel == null)
