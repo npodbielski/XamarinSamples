@@ -112,8 +112,8 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\NavigationFramework\NavigationFramework.csproj">
-      <Project>{F5F2B556-C164-4EE6-A218-F1BD34753D3F}</Project>
+    <ProjectReference Include="..\NavigationFramework\NavigationFramework.csproj">
+      <Project>{f5f2b556-c164-4ee6-a218-f1bd34753d3f}</Project>
       <Name>NavigationFramework</Name>
     </ProjectReference>
   </ItemGroup>

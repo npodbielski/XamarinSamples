@@ -55,7 +55,7 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "IoCFinal", "IoCFinal\IoCFin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoCFinal.Droid", "IoCFinal\IoCFinal.Droid\IoCFinal.Droid.csproj", "{CA672FA2-9300-47F6-B231-24C524A02C09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavigationFramework", "NavigationFramework\NavigationFramework.csproj", "{F5F2B556-C164-4EE6-A218-F1BD34753D3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavigationFramework", "IoCFinal\NavigationFramework\NavigationFramework.csproj", "{F5F2B556-C164-4EE6-A218-F1BD34753D3F}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
