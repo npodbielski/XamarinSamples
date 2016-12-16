@@ -29,8 +29,8 @@ namespace NavigationFramework.Services.Navigation
         {
             get
             {
-                var firstOrDefault = _navigation.NavigationStack.LastOrDefault();
-                return firstOrDefault?.BindingContext as TMasterViewModel;
+                var page = _navigation.NavigationStack.LastOrDefault();
+                return page?.BindingContext as TMasterViewModel;
             }
         }
 
