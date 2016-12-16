@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<masterDetail:MasterDetailControl 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:masterDetail="clr-namespace:NavigationFramework.MasterDetail;assembly=NavigationFramework"
+    x:Class="IoCFinal.Views.MasterDetailView">
+    <masterDetail:MasterDetailControl.SideContent>
+        <StackLayout>
+            <Button Text="To detail page"
+                    FontSize="40" Command="{Binding ToDetail}" />
+            <Button Text="To detail 1 page"
+                    FontSize="40" Command="{Binding ToDetail1}" />
+        </StackLayout>
+    </masterDetail:MasterDetailControl.SideContent>
+</masterDetail:MasterDetailControl>

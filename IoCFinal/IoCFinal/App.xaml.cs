@@ -1,12 +1,12 @@
 ﻿using System.Reflection;
-using IoCSample.Services;
-using IoCSample.Services.Navigation;
-using IoCSample.ViewModels;
+using NavigationFramework.Services;
+using NavigationFramework.Services.Navigation;
+using NavigationFramework.Services.View;
+using NavigationFramework.ViewModels;
 using TinyIoC;
-using ViewFactory.ViewFactory;
 using Xamarin.Forms;
 
-namespace IoCSample
+namespace IoCFinal
 {
     public partial class App
     {
@@ -18,7 +18,8 @@ namespace IoCSample
             container.BuildUp(this);
             ViewFactory.Init(Assembly.GetExecutingAssembly());
             InitializeComponent();
-            var navigationPage = new NavigationPage(ViewFactory.CreateView<MainPageViewModel>());
+            var uiPage = ViewFactory.CreateView<MainPageViewModel>();
+            var navigationPage = new NavigationPage(uiPage);
             container.Register(navigationPage.Navigation);
             MainPage = navigationPage;
         }
