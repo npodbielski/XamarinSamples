@@ -1,12 +1,19 @@
-﻿namespace Service
-{
-	public partial class App
-	{
-		public App ()
-		{
-			InitializeComponent();
+﻿using Service.ViewModel;
+using TinyIoC;
 
-			MainPage = new MainPage();
-		}
-	}
+namespace Service
+{
+    public partial class App
+    {
+        public App()
+        {
+            InitializeComponent();
+
+            var mainPageViewModel = TinyIoCContainer.Current.Resolve<MainPageViewModel>();
+            MainPage = new MainPageView
+            {
+                BindingContext = mainPageViewModel
+            };
+        }
+    }
 }
